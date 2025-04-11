@@ -6,7 +6,7 @@ If updated techniques or new information becomes available, please contact the c
 
 ---
 
-## Contents
+# Contents
 - [Introduction](#introduction)
 - [Ramps](#ramps)
   - [Ramp Bugs](#ramp-bugs)
@@ -32,58 +32,152 @@ If updated techniques or new information becomes available, please contact the c
 
 ---
 
-## Introduction
+# Introduction
+#### Purpose of This Guide
+The primary objectives of this guide are to:​
+- Demystify the surf mapping process: Break down complex concepts into manageable steps.​
+- Highlight common issues: Address known bugs and quirks specific to CS2 surf mapping.​
+- Share effective workflows: Offer insights into efficient mapping practices, including version control and testing methodologies.​
+- Foster community collaboration: Encourage knowledge sharing and collective problem-solving among mappers.
+#### What This Guide Covers
+This guide encompasses the following topics:​
+- Ramp Construction and Design: Techniques for building functional and aesthetically pleasing ramps.​
+- Map Zoning and Triggers: Setting up timers, teleports, and other essential map elements.​
+- Lighting and Optimization: Strategies for effective lighting and performance enhancement.​
+- Testing and Building: Best practices for map efficient testing, compiling, and deployment.​
+- Version Control with Git: Managing your mapping projects using Git for collaboration and backup.​
+Each section is crafted to provide step-by-step instructions, accompanied by examples and visual aids where applicable.
 To include:
-Ramp bugs in CS2
-- The purpose of this guide (primarily new maps, not porting)
-- The areas covered in the guide
-- The reason for this guide
-- The open-source nature of this guide, constructed by many members of the mapping community (hopefully)
-- A declaration that this guide is not a tutorial for hammer, but specifically for the construction of surf maps
-- Recommendation that the guide be read in its entirety before beginning a mappers first project
+#### Community Contributions
+The CS2 surf mapping community thrives on collaboration. If you have insights, techniques, or resources that could benefit fellow mappers, we encourage you to contribute to this guide. Together, we can build a robust knowledge base that supports both current and future creators.
+#### Before You Begin
+It is strongly recommended that you read through the entire guide before beginning your first surf map project. Understanding the full scope of surf-specific mechanics, common pitfalls, and Source 2 workflows will save you hours of frustration and ensure your mapping journey starts on solid ground.
 
 <br>
 <br>
 <br>
 
-## Ramps
+# Ramps
 ### Ramp Bugs
-To Include:
-- The differnce between ramp bugs in source 1 and source 2
-- The rampbugfix plugin overview and link to explanation
-- Overview of methods to reduce these rampbugs
+Ramp bugs are a significant challenge in CS2 surf mapping, often disrupting player momentum and leading to frustrating gameplay experiences. Unlike in Source 1, where ramp bugs typically result in players getting stuck or abruptly stopping, CS2 introduces new behaviors where velocity can be unpredictably redirected, causing players to veer off course or lose speed unexpectedly.​
+#### Causes of Ramp Bugs
+According to the [CS2KZ rampbug fix analysis](https://gist.github.com/zer0k-z/2eb0c230c8f2c62b5c46d36353cf8d8d), ramp bugs in CS2 are primarily caused by tiny, invisible slopes—often no larger than 0.06 units—that form at the edges or intersections of mesh triangles. These micro-slopes are not present in the map's design but are generated upon loading the map, leading to inconsistencies across different CS2 versions. Notably, these bugs became more prevalent following the "Call to Arms" update, which significantly increased their frequency.​
+#### Mitigation Strategies
+While a definitive fix from Valve is pending, mappers can employ several strategies to minimize the occurrence of ramp bugs:​
+- **Use Convex Hull Collision:** Applying convex hull collision physics and tying an entity to the ramp can reduce ramp bugs without causing client-side prediction errors. However, this method, while highly effective, doesn't eliminate all ramp bugs, especially those occurring at the end of ramps.​
+- **Implement Server-Side Plugins:** Plugins that intercept movement functions like TryPlayerMove and CategorizePosition can adjust player movement to avoid ramp bugs. These plugins work by detecting potential bug scenarios and slightly repositioning the player to maintain momentum. It's important to note that while effective, this approach may introduce prediction errors for players with high latency.
+
+<br>
+<br>
 
 ### Ramp Construction
-To Include:
-- The method of curved ramp body construction (pre player-clip)
-    - Aligning vertices
-    - Segment width
-    - Segment Rotation Angle
-    - Ramp Size (include examples from well known maps)
-- The latest / most effective ramp clipping method (Player clip method)
-  - duplicate faces as player clip material
-  - translate interior body-segment edges along ramp surface plane to overlap eachother.
-  - thicken the faces (2 units)
-  - The physics type of the ramp components
-  - include methods of solidifying ramp (clipping end-caps / bottom, or using offset / lowered nodraw mesh)
-- The method of combining ramp segments into single mesh
-  - Deleting every second segment
-  - Deleting interior faces
-  - Using an interpolated bridge to connect open edge loops
-  - For ramps made of even number of segments, deleting second last end segment after completing bridge interpolation, then interpolate to final segment.
-  
+#### Straight Ramps
+1. For straight ramps, constructing ramps anti-rampbug is relatively straight forward. Create a simple ramp segment by placing a rectangular block *(LShift+B)*
+
+*INSERT GIF OF USING BLOCK TOOL*
+
+2. Use the clip tool *(LShift+X)* to cut the block into a triangle, ensure `cap new surfaces` is enabled.
+
+*INSERT GIF OF USING CUT TOOL*
+
+3. Extend the ramp to the desired length using the selection tool *(LShift+S)*
+
+*INSERT GIF OF STRETCHING RAMP WITH SELECTION TOOL*
+
+4. Select the surfable surfaces of the ramp in `face mode` and copy them *(Ctrl+C)*
+Then select the ramp in `mesh mode` and hide it with `quickhide` *(H)*.
+Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don't need to alter any paste settings you can just click `ok`)
+
+*INSERT GIF OF SELECTING FACES, COPYING THEM, AND THEN SELECTING RAMP IN MESH MODE AND HIDING AND PASTING*
+
+5. Search for and find the `toolsplayerclip` material in the `material browser`, and apply it to the faces *(LShift+T)*
+
+*INSERT GIF OF FINDING TOOLSPLAYERCLIP MATERIAL AND APPLYING*
+
+6. Use the `thicken faces` *(G)* tool to increase the thickness to `2 units`. Ensure `from center` is disabled.
+
+*INSERT GIF OF THICKEN FACES AND APPLYING*
+
+7. Select the clip in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Mesh`.
+
+*INSERT GIF OF CHANGING PHYSICS TYPE*
+
+8. Now finally unhide the ramp body *(U)*, and select the ramp body in `mesh mode`. In the `object properties` menu change the `physics type` from `Default` to `None`.
+
+*INSERT GIF OF UNHIDING AND CHANGING RAMP BODY PHYSICS TYPE*
+
+The straight ramnp is now complete and ready to be surfed on.
+
+<br>
+
+#### Curved Ramps
+Creating a curved ramp, either vertically or horizontally curved is a little more complicated, but still easy if you follow this method closely.
+1. Create and cut a single ramp segment using the straight ramp method ([steps 1 & 2](#straight-ramps))
+
+*INSERT PHOTO OF RAMP SEGMENT*
+
+2. Duplicate this segment *(LShift+ArrowKey)*. Enter `rotation mode` *(R)* and select the duplicated ramp segment. Center the `rotation pivot` in the selection *(Alt+Home)* and rotate the segment.
+
+*INSERT GIFS OF DUPLICATING SEGMENT, CENTERING PIVOT AND ROTATING*
+
+3. Select all the vertices of the rotated segment in `vertex mode` *(Double Click)*, and drag the bottom corner vertex to align with the original ramp segment in the `2D Side View`.
+
+*INSERT GIFS OF SELECTING AND ALIGNING VERTICES*
+
+4. Repeat steps 2 & 3, selecting all the ramp segments when duplicating, and all the vertices when aligning
+
+*INSERT GIFS OF REPEATING STEPS AND DUPLICATING RAMP SEGMENTS AND ALIGNING*
+
+5. Select the surfable surfaces of the ramp in `face mode` and copy them *(Ctrl+C)*
+Then select the ramp in `mesh mode` and hide it with `quickhide` *(H)*.
+Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don't need to alter any paste settings you can just click `ok`)
+
+*INSERT GIF OF SELECTING FACES, COPYING THEM, AND THEN SELECTING RAMP IN MESH MODE AND HIDING AND PASTING*
+
+6. Search for and find the `toolsplayerclip` material in the `material browser`, and apply it to the faces *(LShift+T)*
+
+*INSERT GIF OF FINDING TOOLSPLAYERCLIP MATERIAL AND APPLYING*
+
+7. Use the `thicken faces` *(G)* tool to increase the thickness to `2 units`. Ensure `from center` is disabled.
+
+*INSERT GIF OF THICKEN FACES AND APPLYING*
+
+8. Select the clips in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Multiple Convex Hulls`. Then select the mesh of the first ramp clip, and change its `physics type` from `Multiple Convex Hulls` to `Mesh`
+
+*INSERT GIF OF CHANGING PHYSICS TYPES*
+
+9. Now unhide the ramp body, and delete every second segment, and the interior facing faces of the remaining segments. (This is easier if you temporarily move the ramp body away from the player clip).
+
+*INSERT GIFS OF REMOVING EVERY SECOND RAMP SEGMENT, SHOW CASES FOR ODD AND EVEN NUMBER OF SEGMENTS*
+
+10. In `edge mode`, select the adjacent `open loops` of edges between the deleted interior faces *(LShift+Double Click)*. Create an `interpolated bridge` between the `edge loops` *(Alt+B)*.
+Ensure `twists` is set to `0` and `steps` is set to `1`. Press enter to confirm. Repeat this for all of the gaps in the ramp.
+If you have an even number of segments, you must then delete all the faces of the final segment and then bridge the remaining final gap.
+
+*INSERT GIFS OF SELECTING EDGE LOOPS AND INTERPOLATING BRIDGES, INCLUDE EXTRA GIF OF EVEN RAMP SEGMENT FINAL BRIDGE*
+
+8. Now finally select the ramp body in `mesh mode`. In the `object properties` menu change the `physics type` from `Default` to `None`.
+
+*INSERT GIF OF CHANGING RAMP BODY PHYSICS TYPE*
+
+The curved ramnp is now complete and ready to be surfed on.
+
+<br>
+<br>
+
 ### Ramp Design & Aesthetics
-To Include:
-- General good practise for design
-  - Use of consistent materials and colours for interactable surfaces (end platforms, ramps, bhoppable surfaces, etc) to guide the player more easily on first playthrough
-  - Use of easily distinguishable materials / colours from interactable surfaces from the rest of the map
-- Use of face cut tool and bevel to create patterns and designs in curved ramp surfaces
+#### Ramp Consistency
+​Incorporating consistent materials and colors for interactive surfaces, such as end platforms, ramps, and bhoppable areas, is essential for intuitive navigation. This consistency allows players to quickly recognize and interact with these elements, enhancing their overall experience. By differentiating these materials and colors from the rest of the map, you create clear visual cues that guide players seamlessly through the environment. ​It is of course, not strictly neccessary, or required, but in general makes it easier for players to learn the routes and limits of the map.
+
+#### Decorating Ramps
+Utilizing tools like the face cut tool and beveling techniques enables the creation of intricate patterns and designs on curved ramp surfaces. These methods not only add aesthetic appeal but also contribute to a more immersive and engaging gameplay environment.
+Similar effects can be achieved by well-designed custom textures, or by modelling workflows through blender, but that is outside the scope for this guide. Many tutorials and guides for this can be found on youtube.
 
 <br>
 <br>
 <br>
 
-## Map Zoning & Design
+# Map Zoning & Design
 ### Timer Plugin Zones
 To Include:
 - Linear and staged/hybrid map start/end zones
@@ -122,7 +216,7 @@ To Include:
 <br>
 <br>
 
-## Lighting & Vis
+# Lighting & Vis
 ### Light Blocking
 To Include:
 - Lighting leak prevention best practise
@@ -146,7 +240,7 @@ To Include:
 <br>
 <br>
 
-## Testing & Building
+# Testing & Building
 ### Map Config & Surf Settings
 To Include:
 - Config options to include
@@ -184,7 +278,7 @@ To Include:
 <br>
 <br>
 
-## Version Control & Git
+# Version Control & Git
 To Include:
 - .gitignore requirements to avoid commiting unneccessary files
 - different addon isolation techniques
@@ -196,5 +290,5 @@ To Include:
 <br>
 <br>
 
-## Special Thanks & Contributors
+# Special Thanks & Contributors
 
