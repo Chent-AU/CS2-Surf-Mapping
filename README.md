@@ -138,19 +138,23 @@ Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don'
 
 *INSERT GIF OF FINDING TOOLSPLAYERCLIP MATERIAL AND APPLYING*
 
-7. Use the `thicken faces` *(G)* tool to increase the thickness to `2 units`. Ensure `from center` is disabled.
+7. Select the interior edges of the ramp segments. In the `Editing` menu, switch to `Use selection's local space axes for gizmo`. Ensure your `grid size` is 1 - 8 units, and use the `translate` tool to slide the edges so that the faces overlap once, and the top vertices are almost touching.
+
+*INSERT GIF OF OVERLAPPING EDGES*
+
+8. Use the `thicken faces` *(G)* tool to increase the thickness to `2 units`. Ensure `from center` is disabled.
 
 *INSERT GIF OF THICKEN FACES AND APPLYING*
 
-8. Select the clips in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Multiple Convex Hulls`. Then select the mesh of the first ramp clip, and change its `physics type` from `Multiple Convex Hulls` to `Mesh`
+9. Select the clips in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Multiple Convex Hulls`. Then select the mesh of the first ramp clip, and change its `physics type` from `Multiple Convex Hulls` to `Mesh`
 
 *INSERT GIF OF CHANGING PHYSICS TYPES*
 
-9. Now unhide the ramp body, and delete every second segment, and the interior facing faces of the remaining segments. (This is easier if you temporarily move the ramp body away from the player clip).
+10. Now unhide the ramp body, and delete every second segment, and the interior facing faces of the remaining segments. (This is easier if you temporarily hide the player clip).
 
 *INSERT GIFS OF REMOVING EVERY SECOND RAMP SEGMENT, SHOW CASES FOR ODD AND EVEN NUMBER OF SEGMENTS*
 
-10. In `edge mode`, select the adjacent `open loops` of edges between the deleted interior faces *(LShift+Double Click)*. Create an `interpolated bridge` between the `edge loops` *(Alt+B)*.
+11. In `edge mode`, select the adjacent `open loops` of edges between the deleted interior faces *(LShift+Double Click)*. Create an `interpolated bridge` between the `edge loops` *(Alt+B)*.
 Ensure `twists` is set to `0` and `steps` is set to `1`. Press enter to confirm. Repeat this for all of the gaps in the ramp.
 If you have an even number of segments, you must then delete all the faces of the final segment and then bridge the remaining final gap.
 
