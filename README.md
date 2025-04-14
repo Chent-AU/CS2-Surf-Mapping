@@ -147,7 +147,7 @@ Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don'
 
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/thicken_faces.gif "Thicken faces of clip surface.")
 
-8. Select the clips in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Multiple Convex Hulls`. Then select the mesh of the first ramp clip, and change its `physics type` from `Multiple Convex Hulls` to `Mesh`
+8. Select the clips in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Multiple Convex Hulls`. Then select the mesh of the first ramp clip (the clip at the start of the ramp based on the direction the ramp will be travelled in the map), and change its `physics type` from `Multiple Convex Hulls` to `Mesh`
 
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/change_ramp_clip_physics_and_end_clip_physics.gif "Change physics clip physics types.")
 
