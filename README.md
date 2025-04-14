@@ -1,8 +1,10 @@
 # CS2 Surf Mapping
-A comprehensive guide on the workflows and techniques required to create surf maps for Counter-Strike 2 in the Source 2 Engine.
+A guide on the workflows and techniques required to create surf maps for Counter-Strike 2 in the Source 2 Engine.
 
 This repository will include the zipped source files required to view, edit and complete the examples provided in the guide.
 If updated techniques or new information becomes available, please contact the contributors.
+
+Note that this guide is not designed as a tutorial for the tools and capabailities of the Hammer editor. There are many available tutorials on how to use the tools described in this guide online, this guide is for the specific techniques required to make building and testing Surf maps in CS2.
 
 ---
 
@@ -44,10 +46,11 @@ This guide encompasses the following topics:​
 - Ramp Construction and Design: Techniques for building functional and aesthetically pleasing ramps.​
 - Map Zoning and Triggers: Setting up timers, teleports, and other essential map elements.​
 - Lighting and Optimization: Strategies for effective lighting and performance enhancement.​
-- Testing and Building: Best practices for map efficient testing, compiling, and deployment.​
-- Version Control with Git: Managing your mapping projects using Git for collaboration and backup.​
+- Testing and Building: Best practices for efficient map testing, compiling, and deployment.​
+- Version Control with Git: Managing your mapping projects using Git for collaboration and version control.​
+
 Each section is crafted to provide step-by-step instructions, accompanied by examples and visual aids where applicable.
-To include:
+
 #### Community Contributions
 The CS2 surf mapping community thrives on collaboration. If you have insights, techniques, or resources that could benefit fellow mappers, we encourage you to contribute to this guide. Together, we can build a robust knowledge base that supports both current and future creators.
 #### Before You Begin
@@ -146,9 +149,13 @@ Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don'
 
 8. Select the clips in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Multiple Convex Hulls`. Then select the mesh of the first ramp clip, and change its `physics type` from `Multiple Convex Hulls` to `Mesh`
 
+*Note, 'the first ramp clip' is the clip at the start of the ramp, where start and end are defined by the direction the ramp will be surfed when playing the map.*
+
+*Note, if your curved ramp contains both long straight section(s) and curved section(s), ensure the ramp clip(s) for the straight section(s) have `Physics Type` set to `Mesh`.*
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/change_ramp_clip_physics_and_end_clip_physics.gif "Change physics clip physics types.")
 
-9. Now unhide the ramp body *(U)*, and hide the clip surfaces *(H)*. Then delete every second segment *(Del)*, and the interior facing faces of the remaining segments. (This is easier if you temporarily hide the player clip).
+9. Ensure the ramp clips are selected in `mesh mode`, now unhide the ramp body *(U)*, and hide the clip surfaces *(H)*. Then delete every second segment *(Del)*, and the interior facing faces of the remaining segments.
 
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/hide_clip_and_delete_body_intermediate_segments.gif "Unhide ramp body, hide clips and delete interval segments.")
 
@@ -171,6 +178,7 @@ If you have an even number of segments, you must then delete all the faces of th
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/clip_end_and_bottom_and_change_phys.gif "Clip end and bottom of ramp body.")
 
 You can now unhide all the components *(U)* and use the completed ramp. Ensure the if you move or rotate the ramp, that you select **ALL** components.
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/unhide_final_product.gif "Unhide all components.")
 
 <br>
