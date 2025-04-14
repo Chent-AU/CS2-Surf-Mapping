@@ -81,38 +81,46 @@ While a definitive fix from Valve is pending, mappers can employ several strateg
 
 2. Use the clip tool *(LShift+X)* to cut the block into a triangle, ensure `cap new surfaces` is enabled.
 
-![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/cut_block.gif "Cut block to ramp shape")
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/cut_block.gif "Cut block to ramp shape.")
 
 3. Extend the ramp to the desired length using the selection tool *(LShift+S)*
 
-*INSERT GIF OF STRETCHING RAMP WITH SELECTION TOOL*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/straight_ramp/extend_body.gif "Extend the ramp to desired size.")
 
 4. Select the surfable surfaces of the ramp in `face mode` and copy them *(Ctrl+C)*
 Then select the ramp in `mesh mode` and hide it with `quickhide` *(H)*.
 Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don't need to alter any paste settings you can just click `ok`)
 
-*INSERT GIF OF SELECTING FACES, COPYING THEM, AND THEN SELECTING RAMP IN MESH MODE AND HIDING AND PASTING*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/straight_ramp/copy_surface_paste_special_hide_ramp_body.gif "Copy and paste faces, and hide ramp body.")
 
 5. Search for and find the `toolsplayerclip` material in the `material browser`, and apply it to the faces *(LShift+T)*
 
-*INSERT GIF OF FINDING TOOLSPLAYERCLIP MATERIAL AND APPLYING*
+![alt text](https://github.com/Chent-AU/CS2-Surf-Mapping/blob/main/media/gifs/straight_ramp/apply_toolsplayerclip.gif "Apply the 'toolsplayerclip' material.")
 
 6. Use the `thicken faces` *(G)* tool to increase the thickness to `2 units`. Ensure `from center` is disabled.
 
-*INSERT GIF OF THICKEN FACES AND APPLYING*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/straight_ramp/thicken_clip_faces.gif "Thicken the faces of the ramp clip")
 
 7. Select the clip in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Mesh`.
 
-*INSERT GIF OF CHANGING PHYSICS TYPE*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/straight_ramp/change_clip_phys_deafult_to_mesh.gif "Change clip physics type to mesh.")
 
-8. Now finally unhide the ramp body *(U)*, and select the ramp body in `mesh mode`. In the `object properties` menu change the `physics type` from `Default` to `None`.
+8. Ensure the clip is selected in `mesh mode`, unhide the ramp body *(U)* and hide the clip *(H)*. Select the ramp body in `mesh mode`. In the `object properties` menu change the `physics type` from `Default` to `None`.
 
-*INSERT GIF OF UNHIDING AND CHANGING RAMP BODY PHYSICS TYPE*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/straight_ramp/change_ramp_body_phys_to_none.gif "Change ramp body physics type to none.")
+
+9. Select the bottom and end cap faces of the ramp body. Use `copy` *(Ctrl+C)* and `paste special` *(Ctrl+LShift+V)* to duplicate the faces. Apply the `toolsplayerclip` material *(LShift+T)*, and then in `mesh mode`, change the `physics mode` of this clip from `None` to `Mesh`.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/straight_ramp/clip_end_caps_and_change_phys_to_mesh.gif "Clip end caps and bottom and change physics to mesh.")
+
+10. Now you can unhide all the ramp components *(U)* and your ramp is ready to be surfed.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/straight_ramp/unhide_all.gif "Unhide all components.")
 
 The straight ramnp is now complete and ready to be surfed on.
 
 <br>
-
+<br>
 #### Curved Ramps
 Creating a curved ramp, either vertically or horizontally curved is a little more complicated, but still easy if you follow this method closely.
 1. Create and cut a single ramp segment using the straight ramp method ([steps 1 & 2](#straight-ramps))
