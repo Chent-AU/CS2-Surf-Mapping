@@ -171,6 +171,7 @@ If you have an even number of segments, you must then delete all the faces of th
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/clip_end_and_bottom_and_change_phys.gif "Clip end and bottom of ramp body.")
 
 You can now unhide all the components *(U)* and use the completed ramp. Ensure the if you move or rotate the ramp, that you select **ALL** components.
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/unhide_final_product.gif "Unhide all components.")
 
 <br>
