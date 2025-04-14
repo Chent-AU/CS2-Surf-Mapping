@@ -203,6 +203,14 @@ You can now unhide all the components *(U)* and use the completed ramp. Ensure t
 Utilizing tools like the face cut tool and beveling techniques enables the creation of intricate patterns and designs on curved ramp surfaces. These methods not only add aesthetic appeal but also contribute to a more immersive and engaging gameplay environment.
 Similar effects can be achieved by well-designed custom textures, or by modelling workflows through blender, but that is outside the scope for this guide. Many tutorials and guides for this can be found on youtube.
 
+*View here the `face cut tool` *(C)*, to cut an indent into the faces of the ramp surface.*
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_decoration/cut_faces.gif "Cut ramp surface.")
+
+*And then using `local selection axis` the faces can be indented and duplicated to make a window into the ramp.*
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_decoration/indent_faces.gif "Indent ramp surface.")
+
 <br>
 <br>
 <br>
