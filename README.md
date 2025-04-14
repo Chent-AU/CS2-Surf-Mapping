@@ -74,11 +74,11 @@ While a definitive fix from Valve is pending, mappers can employ several strateg
 #### Straight Ramps
 1. For straight ramps, constructing ramps anti-rampbug is relatively straight forward. Create a simple ramp segment by placing a rectangular block *(LShift+B)*
 
-*INSERT GIF OF USING BLOCK TOOL*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/make_block_square.gif "Using LShift+B to place a rectangular block.")
 
 2. Use the clip tool *(LShift+X)* to cut the block into a triangle, ensure `cap new surfaces` is enabled.
 
-*INSERT GIF OF USING CUT TOOL*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/cut_block.gif "Cut block to ramp shape")
 
 3. Extend the ramp to the desired length using the selection tool *(LShift+S)*
 
@@ -114,57 +114,64 @@ The straight ramnp is now complete and ready to be surfed on.
 Creating a curved ramp, either vertically or horizontally curved is a little more complicated, but still easy if you follow this method closely.
 1. Create and cut a single ramp segment using the straight ramp method ([steps 1 & 2](#straight-ramps))
 
-*INSERT PHOTO OF RAMP SEGMENT*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/make_block_square.gif "Using LShift+B to place a rectangular block.")
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/cut_block.gif "Cut block to ramp shape")
 
 2. Duplicate this segment *(LShift+ArrowKey)*. Enter `rotation mode` *(R)* and select the duplicated ramp segment. Center the `rotation pivot` in the selection *(Alt+Home)* and rotate the segment.
+   Select all the vertices of the rotated segment in `vertex mode` *(Double Click)*, and drag the bottom corner vertex to align with the original ramp segment in the `2D Side View`
 
-*INSERT GIFS OF DUPLICATING SEGMENT, CENTERING PIVOT AND ROTATING*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/duplicate_and_align_first_segment.gif "Duplicate, rotate and align the bottom-corner vertex of the ramp segment.")
 
-3. Select all the vertices of the rotated segment in `vertex mode` *(Double Click)*, and drag the bottom corner vertex to align with the original ramp segment in the `2D Side View`.
+3. Repeat step 2, selecting all the ramp segments when duplicating, and all the vertices when aligning. Ensure the rotation amount is consistent between each ramp segment. *(The example uses 5° per ramp segment)*
 
-*INSERT GIFS OF SELECTING AND ALIGNING VERTICES*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/create_more_duplicated_segments_and_align.gif "Repeat steo 2, until desired ramp length is met.")
 
-4. Repeat steps 2 & 3, selecting all the ramp segments when duplicating, and all the vertices when aligning
-
-*INSERT GIFS OF REPEATING STEPS AND DUPLICATING RAMP SEGMENTS AND ALIGNING*
-
-5. Select the surfable surfaces of the ramp in `face mode` and copy them *(Ctrl+C)*
+4. Select the surfable surfaces of the ramp in `face mode` and copy them *(Ctrl+C)*
 Then select the ramp in `mesh mode` and hide it with `quickhide` *(H)*.
 Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don't need to alter any paste settings you can just click `ok`)
 
-*INSERT GIF OF SELECTING FACES, COPYING THEM, AND THEN SELECTING RAMP IN MESH MODE AND HIDING AND PASTING*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/duplicate_faces_and_hide_ramp_body.gif "Select, and duplicate the ramp body faces, and hide the ramp body meshes.")
 
-6. Search for and find the `toolsplayerclip` material in the `material browser`, and apply it to the faces *(LShift+T)*
+5. Search for and find the `toolsplayerclip` material in the `material browser`, and apply it to the faces *(LShift+T)*
 
-*INSERT GIF OF FINDING TOOLSPLAYERCLIP MATERIAL AND APPLYING*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/apply_toolsplayerclip.gif "Apply the toolsplayerclip material to clips.")
 
-7. Select the interior edges of the ramp segments. In the `Editing` menu, switch to `Use selection's local space axes for gizmo`. Ensure your `grid size` is 1 - 8 units, and use the `translate` tool to slide the edges so that the faces overlap once, and the top vertices are almost touching.
+7. In `edge mode` select the interior edges of the ramp segments. In the `Editing` menu, switch to `Use selection's local space axes for gizmo`. Ensure your `grid size` is 1 - 8 units, and use the `translate` tool to slide the edges so that the faces overlap once, and the top vertices are almost touching.
 
-*INSERT GIF OF OVERLAPPING EDGES*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/translate_edges.gif "Translate edges along clip body surface.")
 
-8. Use the `thicken faces` *(G)* tool to increase the thickness to `2 units`. Ensure `from center` is disabled.
+7. Use the `thicken faces` *(G)* tool to increase the thickness to `2 units`. Ensure `from center` is disabled.
 
-*INSERT GIF OF THICKEN FACES AND APPLYING*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/thicken_faces.gif "Thicken faces of clip surface.")
 
-9. Select the clips in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Multiple Convex Hulls`. Then select the mesh of the first ramp clip, and change its `physics type` from `Multiple Convex Hulls` to `Mesh`
+8. Select the clips in `mesh mode` and in the `object properties` menu change the `physics type` from `Default` to `Multiple Convex Hulls`. Then select the mesh of the first ramp clip, and change its `physics type` from `Multiple Convex Hulls` to `Mesh`
 
-*INSERT GIF OF CHANGING PHYSICS TYPES*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/change_ramp_clip_physics_and_end_clip_physics.gif "Change physics clip physics types.")
 
-10. Now unhide the ramp body, and delete every second segment, and the interior facing faces of the remaining segments. (This is easier if you temporarily hide the player clip).
+9. Now unhide the ramp body *(U)*, and hide the clip surfaces *(H)*. Then delete every second segment *(Del)*, and the interior facing faces of the remaining segments. (This is easier if you temporarily hide the player clip).
 
-*INSERT GIFS OF REMOVING EVERY SECOND RAMP SEGMENT, SHOW CASES FOR ODD AND EVEN NUMBER OF SEGMENTS*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/hide_clip_and_delete_body_intermediate_segments.gif "Unhide ramp body, hide clips and delete interval segments.")
 
-11. In `edge mode`, select the adjacent `open loops` of edges between the deleted interior faces *(LShift+Double Click)*. Create an `interpolated bridge` between the `edge loops` *(Alt+B)*.
+10. In `edge mode`, select the adjacent `open loops` of edges between the deleted interior faces *(LShift+Double Click)*. Create an `interpolated bridge` between the `edge loops` *(Alt+B)*.
 Ensure `twists` is set to `0` and `steps` is set to `1`. Press enter to confirm. Repeat this for all of the gaps in the ramp.
 If you have an even number of segments, you must then delete all the faces of the final segment and then bridge the remaining final gap.
 
-*INSERT GIFS OF SELECTING EDGE LOOPS AND INTERPOLATING BRIDGES, INCLUDE EXTRA GIF OF EVEN RAMP SEGMENT FINAL BRIDGE*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/bridge_edges.gif "Bridge the ramp segments")<br>
 
-8. Now finally select the ramp body in `mesh mode`. In the `object properties` menu change the `physics type` from `Default` to `None`.
+*Note, if your ramp body is made of an even number of segments, you will have to delete the faces of the end segment and bridge them like in the gif below*
 
-*INSERT GIF OF CHANGING RAMP BODY PHYSICS TYPE*
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/even_segments_last_piece.gif "Bridge final segment of even number of segment ramp.")
 
-The curved ramnp is now complete and ready to be surfed on.
+11. Now select the ramp body in `mesh mode`. In the `object properties` menu change the `physics type` from `Default` to `None`.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/change_ramp_body_phys_to_none.gif "Change the ramp body physics to none.")
+
+12. Finally, select the bottom and end cap faces of the ramp body. Use `copy` *(Ctrl+C)* and `paste special` *(Ctrl+LShift+V)* to duplicate the faces. Apply the `toolsplayerclip` material *(LShift+T)*, and then in `mesh mode`, change the `physics mode` of this clip from `None` to `Mesh`.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/clip_end_and_bottom_and_change_phys.gif "Clip end and bottom of ramp body.")
+
+You can now unhide all the components *(U)* and use the completed ramp. Ensure the if you move or rotate the ramp, that you select **ALL** components.
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/unhide_final_product.gif "Unhide all components.")
 
 <br>
 <br>
