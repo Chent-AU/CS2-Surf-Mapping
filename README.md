@@ -155,7 +155,7 @@ Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don'
 
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/change_ramp_clip_physics_and_end_clip_physics.gif "Change physics clip physics types.")
 
-9. Now unhide the ramp body *(U)*, and hide the clip surfaces *(H)*. Then delete every second segment *(Del)*, and the interior facing faces of the remaining segments. *(This is much easier if you first select the ramp clips in `mesh mode` and after unhiding the ramp body, you hide the clips (H)).*
+9. Ensure the ramp clips are selected in `mesh mode`, now unhide the ramp body *(U)*, and hide the clip surfaces *(H)*. Then delete every second segment *(Del)*, and the interior facing faces of the remaining segments.
 
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/hide_clip_and_delete_body_intermediate_segments.gif "Unhide ramp body, hide clips and delete interval segments.")
 
