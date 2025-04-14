@@ -1,8 +1,10 @@
 # CS2 Surf Mapping
-A comprehensive guide on the workflows and techniques required to create surf maps for Counter-Strike 2 in the Source 2 Engine.
+A guide on the workflows and techniques required to create surf maps for Counter-Strike 2 in the Source 2 Engine.
 
 This repository will include the zipped source files required to view, edit and complete the examples provided in the guide.
 If updated techniques or new information becomes available, please contact the contributors.
+
+Note that this guide is not designed as a tutorial for the tools and capabailities of the Hammer editor. There are many available tutorials on how to use the tools described in this guide online, this guide is for the specific techniques required to make building and testing Surf maps in CS2.
 
 ---
 
