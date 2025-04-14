@@ -121,6 +121,7 @@ The straight ramnp is now complete and ready to be surfed on.
 
 <br>
 <br>
+
 #### Curved Ramps
 Creating a curved ramp, either vertically or horizontally curved is a little more complicated, but still easy if you follow this method closely.
 1. Create and cut a single ramp segment using the straight ramp method ([steps 1 & 2](#straight-ramps))
