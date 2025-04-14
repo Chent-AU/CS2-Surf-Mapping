@@ -151,7 +151,7 @@ Then paste the faces you copied with `paste special` *(Ctrl+LShift+V)* (You don'
 
 *Note, 'the first ramp clip' is the clip at the start of the ramp, where start and end are defined by the direction the ramp will be surfed when playing the map.*
 
-*Note, if your curved ramp contains both long straight section(s) and curved section(s), ensure the ramp clips for the straight sections have `Physics Type` set to `Mesh`.*
+*Note, if your curved ramp contains both long straight section(s) and curved section(s), ensure the ramp clip(s) for the straight section(s) have `Physics Type` set to `Mesh`.*
 
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/change_ramp_clip_physics_and_end_clip_physics.gif "Change physics clip physics types.")
 
