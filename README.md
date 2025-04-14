@@ -13,6 +13,8 @@ Note that this guide is not designed as a tutorial for the tools and capabailiti
 - [Ramps](#ramps)
   - [Ramp Bugs](#ramp-bugs)
   - [Ramp Construction](#ramp-construction)
+    - [Straight Ramps](#straight-ramps)
+    - [Curved Ramps](#curved-ramps)
   - [Ramp Design & Asthetics](#ramp-design--aesthetics)
 - [Map Zoning & Design](map-zoning--design)
   - [Timer Plugin Zones](#timer-plugin-zones)
