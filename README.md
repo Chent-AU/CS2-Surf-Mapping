@@ -46,10 +46,11 @@ This guide encompasses the following topics:​
 - Ramp Construction and Design: Techniques for building functional and aesthetically pleasing ramps.​
 - Map Zoning and Triggers: Setting up timers, teleports, and other essential map elements.​
 - Lighting and Optimization: Strategies for effective lighting and performance enhancement.​
-- Testing and Building: Best practices for map efficient testing, compiling, and deployment.​
-- Version Control with Git: Managing your mapping projects using Git for collaboration and backup.​
+- Testing and Building: Best practices for efficient map testing, compiling, and deployment.​
+- Version Control with Git: Managing your mapping projects using Git for collaboration and version control.​
+
 Each section is crafted to provide step-by-step instructions, accompanied by examples and visual aids where applicable.
-To include:
+
 #### Community Contributions
 The CS2 surf mapping community thrives on collaboration. If you have insights, techniques, or resources that could benefit fellow mappers, we encourage you to contribute to this guide. Together, we can build a robust knowledge base that supports both current and future creators.
 #### Before You Begin
