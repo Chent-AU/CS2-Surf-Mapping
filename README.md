@@ -339,6 +339,13 @@ A window can be used as a speedcheck, or as a precision test depending on its he
 <br>
 <br>
 
+#### Ramp Strafes
+A ramp strafes can be added to make maintaining units more difficult or to make the setup to jumps more precise.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/obstacles/ramp_strafe.gif "Ramp Strafe")
+<br>
+<br>
+
 #### Pillars / Air Strafes
 Pillars (Or any other object / obstacle) can be used to force the player to strafe through the air.
 
