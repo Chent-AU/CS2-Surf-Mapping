@@ -13,14 +13,18 @@ Note that this guide is not designed as a tutorial for the tools and capabailiti
 - [Ramps](#ramps)
   - [Ramp Bugs](#ramp-bugs)
   - [Ramp Construction](#ramp-construction)
+    - [Size & Steepness]($size--steepness) 
     - [Straight Ramps](#straight-ramps)
-    - [Curved Ramps](#curved-ramps)
+    - [Vertically Curved Ramps](#vertically-curved-ramps)
+    - [Horizontally Curved Ramps](#horizontally-curved-ramps)
   - [Ramp Design & Asthetics](#ramp-design--aesthetics)
-- [Map Zoning & Design](map-zoning--design)
+- [Map Design](#map-design)
+  - [Obstacles](#obstacles)
+  - [Moondomes & Fake Skyboxes](#moondomes--fake-skyboxes)
+- [Zoning](zoning)
   - [Timer Plugin Zones](#timer-plugin-zones)
   - [Triggers & Teleports](#triggers--teleports)
   - [Exploit Prevention](#exploit-prevention)
-  - [Moondomes & Fake Skyboxes](#moondomes--fake-skyboxes)
 - [Lighting & Vis](#lighting--vis)
   - [Light Blocking](#light-blocking)
   - [Lighting Optimisation](#lighting-optimisation)
@@ -76,6 +80,15 @@ While a definitive fix from Valve is pending, mappers can employ several strateg
 <br>
 
 ### Ramp Construction
+#### Size & Steepness
+To Include:
+- How size and steepness impacts a map (must be > 45 degrees)
+- Examples of sizes of ramps on well known maps
+- Recommended sizes and height / width ratios
+
+<br>
+<br>
+
 #### Straight Ramps
 1. For straight ramps, constructing ramps anti-rampbug is relatively straight forward. Create a simple ramp segment by placing a rectangular block *(LShift+B)*
 
@@ -124,7 +137,7 @@ The straight ramnp is now complete and ready to be surfed on.
 <br>
 <br>
 
-#### Curved Ramps
+#### Vertically Curved Ramps
 Creating a curved ramp, either vertically or horizontally curved is a little more complicated, but still easy if you follow this method closely.
 1. Create and cut a single ramp segment using the straight ramp method ([steps 1 & 2](#straight-ramps))
 
@@ -195,6 +208,11 @@ You can now unhide all the components *(U)* and use the completed ramp. Ensure t
 <br>
 <br>
 
+#### Horizontally Curved Ramps
+
+<br>
+<br>
+
 ### Ramp Design & Aesthetics
 #### Ramp Consistency
 ​Incorporating consistent materials and colors for interactive surfaces, such as end platforms, ramps, and bhoppable areas, is essential for intuitive navigation. This consistency allows players to quickly recognize and interact with these elements, enhancing their overall experience. By differentiating these materials and colors from the rest of the map, you create clear visual cues that guide players seamlessly through the environment. ​It is of course, not strictly neccessary, or required, but in general makes it easier for players to learn the routes and limits of the map.
@@ -215,7 +233,35 @@ Similar effects can be achieved by well-designed custom textures, or by modellin
 <br>
 <br>
 
-# Map Zoning & Design
+# Map Design
+### Obstacles
+To Include:
+- a section on each common obstacle in a surf map and a description and build guide (and a difficulty rating or range in surf map tier)
+  - Spin
+  - Royal Spin
+  - Drop Strafe
+  - Ramp Stafe
+  - Window
+  - Pillars / Columns / Airstrafe
+  - Headcheck
+  - Headsurf
+  - Bhop
+  - Slide
+  - Speedcheck (highjump and longjump)
+
+### Moondomes & Fake Skyboxes
+To Include:
+- Explanation on changes from Source 1 Skybox Material
+- How to create Moondomes
+  - Stiching cubemap images
+  - Using raw EXR files
+  - Where to find skybox textures
+
+<br>
+<br>
+<br>
+
+# Zoning
 ### Timer Plugin Zones
 To Include:
 - Linear and staged/hybrid map start/end zones
@@ -241,14 +287,6 @@ To Include:
 - Timer-Killer trigger zones
 - Reset trigger techniques
 - Nodraw / playerclip encapsulation
-  
-### Moondomes & Fake Skyboxes
-To Include:
-- Explanation on changes from Source 1 Skybox Material
-- How to create Moondomes
-  - Stiching cubemap images
-  - Using raw EXR files
-  - Where to find skybox textures
 
 <br>
 <br>
