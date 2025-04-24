@@ -81,6 +81,9 @@ While a definitive fix from Valve is pending, mappers can employ several strateg
 <br>
 
 ### Ramp Types
+*Note - full and inverted ramp variants can be easily created by mirroring a half ramp, so it is best to create whatever ramp you desire as a half ramp, and then duplicate as neccessary to reduce repeated work.*
+<br>
+
 #### Straight Half Ramp
 
 ![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/straight_half.gif "Straight Half Ramp")
