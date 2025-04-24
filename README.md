@@ -297,6 +297,53 @@ Similar effects can be achieved by well-designed custom textures, or by modellin
 
 # Map Design
 ### Obstacles
+Here is a list of obstacles you might wish to include into your map.
+<br>
+<br>
+
+#### Spin
+A normal spin will only allow the player to turn in one direction.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/obstacles/spin.gif "Default Spin")
+<br>
+<br>
+
+#### Royal Spin
+A royal spin will force the player to change the direction of their rotation part way into the spin.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/obstacles/royal_spin.gif "Royal Spin")
+<br>
+<br>
+
+#### Free Spin
+A free spin will allow the player to spin in their desired direction.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/obstacles/free_spin.gif "Free Spin")
+<br>
+<br>
+
+#### Drop Strafe
+A drop strafe will allow the player to strafe left and right instead of spinning (assuming there is enough room).
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/obstacles/drop_strafe.gif "Drop Strafe")
+<br>
+<br>
+
+#### Window
+A window can be used as a speedcheck, or as a precision test depending on its height, distance and size. It can be made bhoppable or can be made to reset the player if they do not pass through cleanly.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/obstacles/window.gif "Window")
+<br>
+<br>
+
+#### Pillars / Air Strafes
+Pillars (Or any other object / obstacle) can be used to force the player to strafe through the air.
+
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/obstacles/pillars.gif "Pillars")
+<br>
+<br>
+
+
 To Include:
 - a section on each common obstacle in a surf map and a description and build guide (and a difficulty rating or range in surf map tier)
   - Spin
