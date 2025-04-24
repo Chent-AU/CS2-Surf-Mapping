@@ -12,6 +12,7 @@ Note that this guide is not designed as a tutorial for the tools and capabailiti
 - [Introduction](#introduction)
 - [Ramps](#ramps)
   - [Ramp Bugs](#ramp-bugs)
+  - [Ramp Types](#ramp-types)
   - [Ramp Construction](#ramp-construction)
     - [Size & Steepness](#size--steepness) 
     - [Straight Ramps](#straight-ramps)
@@ -75,6 +76,64 @@ According to the [CS2KZ rampbug fix analysis](https://gist.github.com/zer0k-z/2e
 While a definitive fix from Valve is pending, mappers can employ several strategies to minimize the occurrence of ramp bugs:​
 - **Use Convex Hull Collision:** Applying convex hull collision physics and tying an entity to the ramp can reduce ramp bugs without causing client-side prediction errors. However, this method, while highly effective, doesn't eliminate all ramp bugs, especially those occurring at the end of ramps.​
 - **Implement Server-Side Plugins:** Plugins that intercept movement functions like TryPlayerMove and CategorizePosition can adjust player movement to avoid ramp bugs. These plugins work by detecting potential bug scenarios and slightly repositioning the player to maintain momentum. It's important to note that while effective, this approach may introduce prediction errors for players with high latency.
+
+<br>
+<br>
+
+### Ramp Types
+#### Straight Half Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/straight_half.gif "Straight Half Ramp")
+<br>
+<br>
+#### Straight Full Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/straight_full.gif "Straight Full Ramp")
+<br>
+<br>
+#### Straight Inverted Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/straight_inverted.gif "Straight Inverted Ramp")
+<br>
+<br>
+#### Trapezoid Half Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/trapezoid_half.gif "Trapezoid Half Ramp")
+<br>
+<br>
+#### Trapezoid Full Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/trapezoid_full.gif "Trapezoid Full Ramp")
+<br>
+<br>
+#### Trapezoid Inverted Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/trapezoid_inverted.gif "Trapezoid Inverted Ramp")
+<br>
+<br>
+#### Vertical Curved Half Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/vertical_curved_half.gif "Vertical Curved Half Ramp")
+<br>
+<br>
+#### Vertical Curved Full Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/vertical_curved_full.gif "Vertical Curved Full Ramp")
+<br>
+<br>
+#### Vertical Curved Inverted Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/vertical_curved_inverted.gif "Vertical Curved Inverted Ramp")
+<br>
+<br>
+#### Horizontal Curved Half Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/horizontal_curved.gif "Horizontal Curved Half Ramp")
+<br>
+<br>
+#### Horizontal Curved Full Ramp
+
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/horizontal_curved_full.gif "Horizontal Curved Full Ramp")
 
 <br>
 <br>
