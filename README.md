@@ -81,6 +81,7 @@ While a definitive fix from Valve is pending, mappers can employ several strateg
 <br>
 
 ### Ramp Types
+The following is a list of basic ramp types, these types can be combined and merged as well as used individually - e.g. a curved vertical ramp with a trapezoid end.
 *Note - full and inverted ramp variants can be easily created by mirroring a half ramp, so it is best to create whatever ramp you desire as a half ramp, and then duplicate as neccessary to reduce repeated work.*
 <br>
 
