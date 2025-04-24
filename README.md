@@ -13,7 +13,7 @@ Note that this guide is not designed as a tutorial for the tools and capabailiti
 - [Ramps](#ramps)
   - [Ramp Bugs](#ramp-bugs)
   - [Ramp Construction](#ramp-construction)
-    - [Size & Steepness]($size--steepness) 
+    - [Size & Steepness](#size--steepness) 
     - [Straight Ramps](#straight-ramps)
     - [Vertically Curved Ramps](#vertically-curved-ramps)
     - [Horizontally Curved Ramps](#horizontally-curved-ramps)
