@@ -300,6 +300,7 @@ Similar effects can be achieved by well-designed custom textures, or by modellin
 To Include:
 - a section on each common obstacle in a surf map and a description and build guide (and a difficulty rating or range in surf map tier)
   - Spin
+  - Free Spin
   - Royal Spin
   - Drop Strafe
   - Ramp Stafe
