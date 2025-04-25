@@ -20,7 +20,8 @@ Note that this guide is not designed as a tutorial for the tools and capabailiti
     - [Horizontally Curved Ramps](#horizontally-curved-ramps)
   - [Ramp Design & Asthetics](#ramp-design--aesthetics)
 - [Map Design](#map-design)
-  - [Obstacles](#obstacles)
+  - [Physical Obstacles](#obstacles)
+  - [Miscelaneous Mechanics](#miscelaneous-mechanics)
   - [Moondomes & Fake Skyboxes](#moondomes--fake-skyboxes)
 - [Zoning](zoning)
   - [Timer Plugin Zones](#timer-plugin-zones)
@@ -384,6 +385,15 @@ To Include:
   - Bhop
   - Slide
   - Speedcheck (highjump and longjump)
+
+### Miscelaneous Mechanics
+To Include:
+- Anti-grav
+- Slow-mo
+- Moving platforms
+- Ladder catch
+- Doors
+  
 
 ### Moondomes & Fake Skyboxes
 To Include:
