@@ -120,27 +120,27 @@ The following is a list of basic ramp types, these types can be combined and mer
 <br>
 #### Reverse-Trapezoid Half Ramp
 
-![Alt Text]()
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/reverse_trapezoid_half.gif "Reverse Trapezoid Half Ramp")
 <br>
 <br>
 #### Reverse-Trapezoid Full Ramp
 
-![Alt Text]()
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/reverse_trapezoid_full.gif "Reverse Trapezoid Full Ramp")
 <br>
 <br>
 #### Reverse-Trapezoid Inverted Ramp
 
-![Alt Text]()
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/reverse_trapezoid_inverted.gif "Reverse Trapezoid Inverted Ramp")
 <br>
 <br>
 #### Half Pyramid
 
-![Alt Text]()
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/half_pyramid.gif "Half Pyramid")
 <br>
 <br>
 #### Full Pyramid
 
-![Alt Text]()
+![Alt Text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/ramp_types/full_pyramid.gif "Full Pyramid")
 <br>
 <br>
 #### Vertical Curved Half Ramp
