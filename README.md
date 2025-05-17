@@ -301,40 +301,49 @@ If you have an even number of segments, you must then delete all the faces of th
 You can now unhide all the components *(U)* and use the completed ramp. Ensure the if you move or rotate the ramp, that you select **ALL** components.
 
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/unhide_final_product.gif "Unhide all components.")
-
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/curved_ramp/unhide_final_product.gif "Unhide all components.")
 <br>
 <br>
 
 #### Horizontally Curved Ramps
 <br>
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/duplicate_and_rotate_first_segment.gif "Dupe")
 <br>
 <br>
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/repeat_duplicate_segments_for_full_ramp.gif "Dupe more")
 <br>
 <br>
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/copy_faces_hide_body_and_apply_toolsplayerclip.gif "Indent ramp surface.")
 <br>
 <br>
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/translate_edges_thicken_faces.gif "translate and edges")
 <br>
 <br>
-![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/hide_clip_unhide_body.gif "Do stuff")
 
+![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/hide_clip_unhide_body.gif "Do stuff")
 <br>
 <br>
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/delete_every_second_segment_and_interior_faces.gif "Do more stuff")
 <br>
 <br>
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/interpolate_bridges.gif "Interpolate stuff")
 <br>
 <br>
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/create_end_cap_clip_and_apply_phys.gif "Clip end caps")
 <br>
 <br>
+
 ![alt text](https://raw.githubusercontent.com/Chent-AU/CS2-Surf-Mapping/refs/heads/main/media/gifs/horizontal_curved_ramp/change_ramp_body_phys.gif "phys types")
 <br>
 <br>
+
 ### Ramp Design & Aesthetics
 #### Ramp Consistency
 ​Incorporating consistent materials and colors for interactive surfaces, such as end platforms, ramps, and bhoppable areas, is essential for intuitive navigation. This consistency allows players to quickly recognize and interact with these elements, enhancing their overall experience. By differentiating these materials and colors from the rest of the map, you create clear visual cues that guide players seamlessly through the environment. ​It is of course, not strictly neccessary, or required, but in general makes it easier for players to learn the routes and limits of the map.
